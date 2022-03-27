@@ -87,8 +87,5 @@ public class PersonManager3 {
 		{
 			System.out.println(it.next());
 		}
-		
-		
-		
 	}
 }
