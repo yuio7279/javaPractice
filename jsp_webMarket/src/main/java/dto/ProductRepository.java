@@ -40,4 +40,19 @@ public class ProductRepository {
 		return listOfProducts;
 	}
 	
+	//id를 받아 상품 데이터 접근하는 메소드 
+	public Product getProductById (String productId) {
+		Product productById = null;
+		
+		for(int i=0; i<listOfProducts.size(); i++)
+		{
+			Product product = listOfProducts.get(i);
+			if(product != null && product.getProductId() != null && product.getProductId().equals(productId))
+			{
+				productById = product;
+				break;
+			}
+		}
+		return productById;
+	}
 }

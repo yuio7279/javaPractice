@@ -17,9 +17,7 @@
 		}
 		else
 		{
-			
 			response.sendRedirect("response01_failed.jsp");
-			
 		}
 	%>
 	<p> 아이디 : <%= userID %>
