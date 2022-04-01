@@ -9,7 +9,6 @@
 	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0
 /css/bootstrap.min.css"></head>
 <body>
-
 	<nav class="navbar navbar-expand navbar-dark bg-dark">
 		<div class="container">
 			<div class="navbar-header">
