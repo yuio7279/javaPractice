@@ -1,8 +1,9 @@
-package dto;
+package dao;
 //자바빈즈로 사용할 클래스.... 상품 데이터 접근 클래스 만들기
 
-import dto.Product;
 import java.util.ArrayList;
+
+import dto.Product;
 
 public class ProductRepository {
 
@@ -35,6 +36,8 @@ public class ProductRepository {
 		listOfProducts.add(notebook);
 		listOfProducts.add(tablet); //디폴트 생성자
 		}
+	
+	
 	public ArrayList<Product> getAllProducts()
 	{
 		return listOfProducts;
@@ -55,4 +58,13 @@ public class ProductRepository {
 		}
 		return productById;
 	}
+	
+	private static ProductRepository instance = new ProductRepository(); //인스턴스화
+	public static ProductRepository getInstance() { //getter
+		return instance;
+	}
+	public void addProduct(Product product) { //해당상품을 등록
+		listOfProducts.add(product);
+	}
+	
 }
