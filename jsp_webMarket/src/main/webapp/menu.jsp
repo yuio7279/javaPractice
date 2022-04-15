@@ -5,9 +5,8 @@
 <head>
 <meta charset="EUC-KR">
 <title>direction tag</title>
-<link rel = "stylesheet"
-	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0
-/css/bootstrap.min.css"></head>
+<link rel="stylesheet"
+	href="resources/css/bootstrap.min.css"></head>
 <body>
 	<nav class="navbar navbar-expand navbar-dark bg-dark">
 		<div class="container">

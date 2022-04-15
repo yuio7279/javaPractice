@@ -7,9 +7,8 @@
 <head>
 <meta charset="EUC-KR">
 <title>direction tag</title>
-<link rel = "stylesheet"
-	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0
-/css/bootstrap.min.css">
+<link rel="stylesheet"
+	href="resources/css/bootstrap.min.css">
 </head>
 <body>
 <%@ include file="menu.jsp" %>
