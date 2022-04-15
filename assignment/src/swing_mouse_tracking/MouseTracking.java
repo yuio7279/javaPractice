@@ -1,42 +1,47 @@
 package swing_mouse_tracking;
 
+import java.awt.Color;
+import java.awt.Component;
 import java.awt.Container;
+import java.awt.Graphics;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import java.awt.event.MouseMotionListener;
 
+import javax.swing.BorderFactory;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.border.Border;
 
 public class MouseTracking extends JFrame implements MouseMotionListener, MouseListener {
-
-	private JLabel la = new JLabel("김예성");
-	private JLabel j;
 	private Container c = getContentPane();
+	 
 	
 	
 	MouseTracking(){
 		setTitle("마우스 따라 레이블 트래킹");
-		setSize(300,300);
 		
+		JLabel la = new JLabel("김예성");
 		c.setLayout(null);
-		
-		
+		la.setOpaque(true);
+		la.setBackground(Color.GREEN);
+		Border border = BorderFactory.createLineBorder(Color.red, 5);
+		la.setBorder(border);
 		la.setLocation(50,50);
-		la.setSize(100,20);
+		la.setSize(50,20);
 		c.add(la);
 		
 		c.addMouseMotionListener(this);
 		c.addMouseListener(this);
+
 		
 		
-		
-		
+
+		this.setSize(300,300);
 		this.setDefaultCloseOperation(EXIT_ON_CLOSE);
 		this.setVisible(true);
 		c.setFocusable(true);
 		c.requestFocus();
-		
 		
 	}
 	@Override
@@ -53,15 +58,21 @@ public class MouseTracking extends JFrame implements MouseMotionListener, MouseL
 	
 	@Override
 	public void mouseClicked(MouseEvent e) {
-		j = new JLabel("김예성");
-		j.setSize(100,20);
-		j.setLocation(e.getX(),e.getY());
-		c.add(j);
-		
 	}
 	@Override
 	public void mousePressed(MouseEvent e) {
-		// TODO Auto-generated method stub
+		JLabel j = new JLabel("김예성");
+		j.setOpaque(true);
+		j.setBackground(Color.GREEN);
+		
+		Border border = BorderFactory.createLineBorder(Color.red, 5);
+		
+		j.setBorder(border);
+		j.setSize(50,20);
+		j.setLocation(e.getX(),e.getY());
+		c.add(j);
+		c.revalidate();
+		c.repaint();
 		
 	}
 	@Override

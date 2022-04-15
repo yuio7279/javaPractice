@@ -66,39 +66,41 @@ public class KeyEvent extends JFrame {
 	
 	public void input (java.awt.event.KeyEvent e) {
 		
+		//63~ 75 enter입력이 아닌 키입력이 출력되게끔 했었습니다.
 		
-//		String a = "Char : "+e.getKeyChar()+"\tCode : "+e.getKeyCode()+
+//		String a = "Char : "+e.getKeyChar()+"\tCode : "+e.getKeyCode()+				
 //				"\tKeyText : "+java.awt.event.KeyEvent.getKeyText(e.getKeyCode())+"\n";
 //		
 //		txArea.append(a);
 //		txfd.setText("");
 		
 		
-		
-		txArea.append(String.valueOf(e.getKeyCode())+"\n");
+		//82~ 120 enter 입력시 textfield내부 키데이터 출력
 			try 
 			{
 				if(e.getKeyCode()==10)
 				{
-//					e.setKeyChar(txfd.getText().charAt(0));
-					byte[] bytes = txfd.getText().getBytes();
-					e.setKeyCode(bytes[0]);
-					System.out.println(e.getKeyCode());
+					
+//					byte[] bytes = txfd.getText().getBytes();
+//					e.setKeyCode(bytes[0]);
+//					System.out.println(e.getKeyCode());
 					
 			       
 					
-//					char N = txfd.getText().charAt(0);
-//					int num = N;
-//					e.setKeyCode(num);
-//					
-//					String getText = java.awt.event.KeyEvent.getKeyText(num);
-//					String txt = "KeyChar : "+String.valueOf(e.getKeyChar());
-//							txt += "\tKeyCode : "+e.getKeyCode();
-//							txt += "\tKeyText : "+getText;
-//							txt += "\n";
-//					
-//					txArea.append(txt);
-//					txfd.setText("");
+					char N = txfd.getText().charAt(0);
+					int num = N;
+					
+					e.setKeyCode(num);
+					e.setKeyChar(txfd.getText().charAt(0));
+					System.out.println(e.getKeyLocation());
+					String getText = java.awt.event.KeyEvent.getKeyText(e.getKeyCode());
+					String txt = "KeyChar : "+String.valueOf(e.getKeyChar());
+							txt += "\tKeyCode : "+e.getKeyCode();
+							txt += "\tKeyText : "+getText;
+							txt += "\n";
+					
+					txArea.append(txt);
+					txfd.setText("");
 					
 					
 				}
