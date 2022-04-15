@@ -19,6 +19,7 @@ public class TextFieldEx extends JFrame{
 			c.add(new JTextField(20));
 			c.add(new JLabel("ÇÐ°ú"));
 			c.add(new JTextField(""));
+			setVisible(true);
 			
 		}
 	
