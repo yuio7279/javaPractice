@@ -66,7 +66,6 @@ public class KeyEvent extends JFrame {
 	
 	public void input (java.awt.event.KeyEvent e) {
 		
-		//63~ 75 enter입력이 아닌 키입력이 출력되게끔 했었습니다.
 		
 //		String a = "Char : "+e.getKeyChar()+"\tCode : "+e.getKeyCode()+				
 //				"\tKeyText : "+java.awt.event.KeyEvent.getKeyText(e.getKeyCode())+"\n";
@@ -75,28 +74,19 @@ public class KeyEvent extends JFrame {
 //		txfd.setText("");
 		
 		
-		//82~ 120 enter 입력시 textfield내부 키데이터 출력
+		//82~ 120줄 enter 입력시 textfield내부 키데이터 출력
 			try 
 			{
 				if(e.getKeyCode()==10)
 				{
-					
-//					byte[] bytes = txfd.getText().getBytes();
-//					e.setKeyCode(bytes[0]);
-//					System.out.println(e.getKeyCode());
-					
-			       
-					
 					char N = txfd.getText().charAt(0);
 					int num = N;
 					
 					e.setKeyCode(num);
 					e.setKeyChar(txfd.getText().charAt(0));
-					System.out.println(e.getKeyLocation());
-					String getText = java.awt.event.KeyEvent.getKeyText(e.getKeyCode());
 					String txt = "KeyChar : "+String.valueOf(e.getKeyChar());
 							txt += "\tKeyCode : "+e.getKeyCode();
-							txt += "\tKeyText : "+getText;
+							txt += "\t"+e.getSource();
 							txt += "\n";
 					
 					txArea.append(txt);
@@ -113,7 +103,7 @@ public class KeyEvent extends JFrame {
 			}
 			catch (StringIndexOutOfBoundsException E)	
 			{
-				//textField.getText()를 하여 불러오면 공백이 들어가서 Index초과 에러처리를 해줬습니다..;;
+				
 			}
 			
 		

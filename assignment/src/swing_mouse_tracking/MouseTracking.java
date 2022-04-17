@@ -71,7 +71,7 @@ public class MouseTracking extends JFrame implements MouseMotionListener, MouseL
 		j.setSize(50,20);
 		j.setLocation(e.getX(),e.getY());
 		c.add(j);
-		c.revalidate();
+		c.revalidate();	//창 리사이즈를 해야 적용되던것을 해결..
 		c.repaint();
 		
 	}
