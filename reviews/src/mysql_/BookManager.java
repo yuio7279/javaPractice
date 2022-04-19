@@ -24,7 +24,7 @@ public class BookManager {
 				{
 					case 1:{b.insertBook();break;}
 					case 2:{b.deleteBook();break;}
-					case 3:{b.updateBook();break;}
+//					case 3:{b.updateBook();break;}
 					case 4:{b.showList();break;}
 					case 5:{System.out.println("종료합니다.");flag = false;break;}
 					default:{System.out.println("잘못된 입력입니다.");break;}
@@ -35,8 +35,6 @@ public class BookManager {
 			callMenu();
 		}
 	}
-	
-	
 	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
