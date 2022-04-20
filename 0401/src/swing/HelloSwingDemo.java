@@ -47,7 +47,6 @@ class HelloSwingDemo2 extends JFrame {
 		this.setSize(500, 300);
 		this.setVisible(true);
 	}
-	
 }
 
 
