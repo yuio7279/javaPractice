@@ -17,7 +17,7 @@
 	%>
 	<div class="jumbotron">
 		<div class="container">
-			<h1 class="display-3">g
+			<h1 class="display-3">
 					<%= greeting %>
 			</h1>
 		</div>
