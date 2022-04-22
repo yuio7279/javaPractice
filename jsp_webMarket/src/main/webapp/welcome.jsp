@@ -25,6 +25,7 @@
 	<div class="container">
 		<div class="text-center">
 			<h3>
+				Commit Test
 				<%= tagline %>
 			</h3>
 			<%
