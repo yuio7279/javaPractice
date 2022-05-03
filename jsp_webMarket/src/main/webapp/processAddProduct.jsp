@@ -13,7 +13,7 @@
 </head>
 <body>
 	<%
-		request.setCharacterEncoding("UTF-8");
+		request.setCharacterEncoding("UTF-");
 	
 		String filename = "";
 		String realFolder = "C:/upload";
