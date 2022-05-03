@@ -16,7 +16,7 @@
 		request.setCharacterEncoding("UTF-8");
 	
 		String filename = "";
-		String realFolder = "D:java_workspace\\.metadata\\.plugins\\org.eclipse.wst.server.core\\tmp0\\wtpwebapps\\jsp_webMarket\\resources\\images\\";
+		String realFolder = "C:/upload";
 		String encType = "utf-8";
 		int maxSize = 5 * 1024 * 1024;
 	
