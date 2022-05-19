@@ -20,7 +20,7 @@
 		
 		Product product = dao.getProductById(id);
 		if (product == null){
-			response.sendRedirect("exceptionNoPorductId.jsp"); //p378
+			//response.sendRedirect("exceptionNoPorductId.jsp"); //p378
 		}
 		ArrayList<Product> cartList = (ArrayList<Product>)session.getAttribute("cartlist");
 		Product goodsQnt = new Product();
@@ -31,7 +31,7 @@
 				cartList.remove(goodsQnt);	
 			}
 		}
-	
+		response.sendRedirect("cart.jsp");
 	%>
 	
 

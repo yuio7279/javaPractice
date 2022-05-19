@@ -1,6 +1,6 @@
-<%@page import="java.util.ArrayList"%>
-<%@page import="dto.Product"%>
-<%@page import="dao.ProductRepository"%>
+<%@ page import="java.util.ArrayList"%>
+<%@ page import="dto.Product"%>
+<%@ page import="dao.ProductRepository"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -11,9 +11,11 @@
 </head>
 <body>
 	<%
+		
 		String id = request.getParameter("id");
 		if(id == null || id.trim().equals("")){
 			response.sendRedirect("products.jsp");
+			return;
 		}
 		
 		ProductRepository dao = ProductRepository.getInstance();
@@ -32,10 +34,10 @@
 			}
 		}
 		
-		ArrayList<Product> list = (ArrayList<Product>) session.getAttribute("carlist");
+		ArrayList<Product> list = (ArrayList<Product>) session.getAttribute("cartlist");
 		if(list == null){
 			list = new ArrayList<Product>();
-			session.setAttribute("carlist",list);
+			session.setAttribute("cartlist",list);
 		}
 		
 		int cnt = 0;

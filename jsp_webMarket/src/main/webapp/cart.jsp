@@ -1,5 +1,6 @@
-<%@page import="dto.Product"%>
-<%@page import="java.util.ArrayList"%>
+<%@ page import="dto.Product"%>
+<%@ page import="dao.ProductRepository" %>
+<%@ page import="java.util.ArrayList"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -52,7 +53,7 @@
 	                	
 	                %>
 	                	<tr>
-	                		<td><%=product.getProductId()%> -  <%=product.getPname()%></td>
+	                		<td><%=product.getProductId()%> - <%=product.getPname()%></td>
 	                		<td><%=product.getUnitPrice() %></td>
 	                		<td><%=product.getQuantity() %></td>
 	                		<td><%=total %></td>
